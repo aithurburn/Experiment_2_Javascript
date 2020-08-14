@@ -7,6 +7,8 @@
         <script src="../../plugins/jspsych-survey-multi-choice.js"></script>
         <script src="../../configuration/text_variables.js"></script>
         <link rel="stylesheet" href="../../css/jspsych.css">
+        <script type="text/javascript" src="lib/vendors/jquery-2.2.0.min.js"></script>
+	      <script type="text/javascript" src="lib/jspsych-pavlovia-3.0.0.js"></script>
         <style>
         </style>
     </head>
@@ -14,6 +16,12 @@
     </body>
     <script>
       var timeline = [];
+      /* init connection with pavlovia.org */
+      var pavlovia_init = {
+        type: "pavlovia",
+        command: "init"
+      };
+      timeline.push(pavlovia_init);
       /* define welcome message trial */
       var welcome = {
         type: "html-keyboard-response",
@@ -30,30 +38,29 @@
       };
 
       var demographicBlock = {
-      timeline: [
-      {
-        type: 'survey-text',
-        questions: [{
-          prompt: ageStimulus,
-          value: ""
-        }, ],
-        post_trial_gap: 500,
-      },
-      {
-        type: 'html-keyboard-response',
-        stimulus: genderStimulus,
-        choices: ['1', '2', '3', '4', '5', '6'],
-        prompt: genderOptions,
-        post_trial_gap: 500,
-      },
-      {
-      type: 'html-keyboard-response',
-      stimulus: ethnicityStimulus,
-      choices: ['1', '2', '3', '4', '5', '6', '7', '8'],
-      prompt: ethnicityOptions,
-      post_trial_gap: 500,
-      }
-      ]
+        timeline: [{
+            type: 'survey-text',
+            questions: [{
+              prompt: ageStimulus,
+              value: ""
+            }, ],
+            post_trial_gap: 500,
+          },
+          {
+            type: 'html-keyboard-response',
+            stimulus: genderStimulus,
+            choices: ['1', '2', '3', '4', '5', '6'],
+            prompt: genderOptions,
+            post_trial_gap: 500,
+          },
+          {
+            type: 'html-keyboard-response',
+            stimulus: ethnicityStimulus,
+            choices: ['1', '2', '3', '4', '5', '6', '7', '8'],
+            prompt: ethnicityOptions,
+            post_trial_gap: 500,
+          }
+        ]
       }
 
 
@@ -85,7 +92,11 @@
       timeline.push(debriefBlock);
       /* define debrief */
 
-
+      var pavlovia_finish = {
+        type: "pavlovia",
+        command: "finish"
+      };
+      timeline.push(pavlovia_finish);
 
       /* start the experiment */
       jsPsych.init({
