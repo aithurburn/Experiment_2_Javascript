@@ -7,12 +7,14 @@
 </head>
 <body></body>
 <script>
+
+var question
   var trial_1 = {
     type: 'html-keyboard-response',
     stimulus: '<p style="color: red; font-size: 48px; font-weight: bold;">GREEN</p>',
     choices: ['y', 'n'],
     prompt: '<p>Does the color match the word? (Y or N)</p>'
-  }
+  };
 
   var trial_2 = {
     type: 'html-keyboard-response',
@@ -20,7 +22,7 @@
     choices: ['y', 'n'],
     trial_duration: 5000,
     prompt: '<p>Does the color match the word? (Y or N; 5s time limit)</p>'
-  }
+  };
 
   var trial_3 = {
     type: 'html-keyboard-response',
@@ -28,10 +30,11 @@
     choices: jsPsych.NO_KEYS,
     trial_duration: 2000,
     prompt: '<p>No response allowed. 2s wait.</p>'
-  }
+  };
 
+timeline.push(question);
   jsPsych.init({
-    timeline: [trial_1, trial_2, trial_3],
+    timeline: [question],
     on_finish: function() {
       jsPsych.data.displayData();
     },
