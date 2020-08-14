@@ -1,3 +1,4 @@
+var spiteOptions = "1 \n(Strongly \nDisagree)', '2 \n(Slightly \nDisagree)', '3 \n(Neither Agree \nnor Disagree)', '4 \n(Slightly \nAgree)', '5 \n(Strongly \nAgree)"
 var ageStimulus = "What is your age?"
 var genderStimulus = "What gender do you most closely identify with?"
 var genderOptions = "n\nFemale (1)\nMale (2)\nGender Non-Binary (3)\nTrans Male (4)\nTrans Female (5)\nPrefer not to respond (6)"
