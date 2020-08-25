@@ -13,12 +13,13 @@
     <body>
     </body>
     <script>
+    
       var timeline = [];
       var welcome = {
         type: "html-keyboard-response",
         stimulus: "Welcome to the experiment. Press any key to begin."
       };
-      
+
 
       var instructions = {
         type: "html-keyboard-response",
@@ -27,7 +28,6 @@
           "<p>Press any key to begin.</p>",
         post_trial_gap: 500,
       };
-      
 
       var demographicBlock = {
         timeline: [{
@@ -54,7 +54,6 @@
           }
         ]
       }
-      
       var spiteBlock = {
         timeline: [{
             type: 'html-keyboard-response',
@@ -271,74 +270,71 @@
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessFifteen,
+            stimulus: sexualFifteen,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessSixteen,
+            stimulus: sexualSixteen,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessSeventeen,
+            stimulus: sexualSeventeen,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessEighteen,
+            stimulus: sexualEighteen,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessNineteen,
+            stimulus: sexualNineteen,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessTwenty,
+            stimulus: sexualTwenty,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessTwentyOne,
+            stimulus: sexualTwentyOne,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessTwentyTwo,
+            stimulus: sexualTwentyTwo,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
           {
             type: "html-keyboard-response",
-            stimulus: sessTwentyThree,
+            stimulus: sexualTwentyThree,
             choices: ['1', '2', '3', '4', '5'],
             prompt: sessOptions,
             post_trial_gap: 500,
-          }     
+          }
         ]
       }
-      var test_procedure = {
-        timeline: [spiteBlock, sessBlock],
-        randomize_order: true
-      }
       
+
       var debriefBlock = {
         type: "html-keyboard-response",
         stimulus: function () {
@@ -358,11 +354,13 @@
 
         }
       };
-      var timeline = [];
+      var test_array = [sessBlock, spiteBlock];
+      var test_procedure = jsPsych.randomization.shuffle(test_array);
+      
       timeline.push(welcome);
       timeline.push(instructions);
       timeline.push(demographicBlock);
-      timeline.push(test_procedure);
+      timeline = timeline.concat(test_procedure);
       timeline.push(debriefBlock);
       jsPsych.init({
         timeline: timeline,
