@@ -18,7 +18,7 @@
         type: "html-keyboard-response",
         stimulus: "Welcome to the experiment. Press any key to begin."
       };
-      
+
 
       var instructions = {
         type: "html-keyboard-response",
@@ -27,7 +27,6 @@
           "<p>Press any key to begin.</p>",
         post_trial_gap: 500,
       };
-      
 
       var demographicBlock = {
         timeline: [{
@@ -54,7 +53,6 @@
           }
         ]
       }
-      
       var spiteBlock = {
         timeline: [{
             type: 'html-keyboard-response',
@@ -170,175 +168,94 @@
           }
         ]
       }
-      var sessBlock = {
+      var sesBlock = {
         timeline: [{
-            type: "html-keyboard-response",
-            stimulus: sessOne,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwo,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessThree,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessFour,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessFive,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessSix,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessSeven,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessEight,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessNine,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessEleven,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwelve,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessThirteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessFourteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessFifteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessSixteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessSeventeen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessEighteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessNineteen,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwenty,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwentyOne,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwentyTwo,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          },
-          {
-            type: "html-keyboard-response",
-            stimulus: sessTwentyThree,
-            choices: ['1', '2', '3', '4', '5'],
-            prompt: sessOptions,
-            post_trial_gap: 500,
-          }     
+          type: "html-keyboard-response",
+          stimulus: sessOne,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessTwo,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessThree,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessFour,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessFive,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessSix,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessSeven,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessEight,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessNine,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessTen,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessEleven,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        },
+        {
+          type: "html-keyboard-response",
+          stimulus: sessTwelve,
+          choices: ['1', '2', '3', '4', '5'],
+          prompt: sessOptions,
+          post_trial_gap: 500,
+        }
         ]
       }
-      var test_procedure = {
-        timeline: [spiteBlock, sessBlock],
-        randomize_order: true
-      }
-      
+      var shuffledProcedure = jsPsych.randomization.shuffleNoRepeats()
       var debriefBlock = {
         type: "html-keyboard-response",
         stimulus: function () {
@@ -358,12 +275,16 @@
 
         }
       };
-      var timeline = [];
+
+      var test_procedure = {
+        timeline: [spiteBlock, sessBlock, srpsBlock, jealousBlock],
+
+      }
       timeline.push(welcome);
       timeline.push(instructions);
       timeline.push(demographicBlock);
-      timeline.push(test_procedure);
-      timeline.push(debriefBlock);
+
+      timeline.push(debriefBlock)
       jsPsych.init({
         timeline: timeline,
         on_finish: function () {
