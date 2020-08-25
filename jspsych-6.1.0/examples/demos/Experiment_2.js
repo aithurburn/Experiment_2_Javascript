@@ -67,7 +67,7 @@ var debriefBlock = {
     }
 };
 
-var timeline = [];
+
 timeline.push(welcome);
 timeline.push(instructions);
 timeline.push(demographicBlock);
