@@ -5,6 +5,7 @@
         <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
         <script src="jspsych-6.1.0/plugins/jspsych-survey-text.js"></script>
         <script src="jspsych-6.1.0/plugins/jspsych-survey-multi-choice.js"></script>
+        <script src="jspsych-6.1.0/plugins/jspsych-html-slider-response.js"></script>
         <script src="jspsych-6.1.0/configuration/text_variables.js"></script>
         <link rel="stylesheet" href="jspsych-6.1.0/css/jspsych.css">
         <style>
@@ -171,9 +172,9 @@
       }
       var sessBlock = {
         timeline: [{
-            type: "html-keyboard-response",
+            type: "html-slider-response",
             stimulus: sessOne,
-            choices: ['1', '2', '3', '4', '5'],
+            labels: ['healthy', 'unhealthy'],
             prompt: sessOptions,
             post_trial_gap: 500,
           },
@@ -333,6 +334,7 @@
           }
         ]
       }
+      
       
 
       var debriefBlock = {
